@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Device</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/devices}" th:object="${device}">
+  <label for="name">Enter the device`s name</label>
+  <input type="text" th:field="*{name}" id="name" />
+  <label for="mac_address">Enter the device`s mac_address</label>
+  <input type="text" th:field="*{mac_address}" id="mac_address" />
+  <label for="user_id">Enter a user_id who an owner of the device</label>
+  <input type="text" th:field="*{user_id}" id="user_id" />
+  <br>
+  <input type="submit" value="Create" />
+
+</form>
+
+</body>
+</html>

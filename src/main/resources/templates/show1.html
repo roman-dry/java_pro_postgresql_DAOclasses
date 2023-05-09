@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show</title>
+</head>
+<body>
+<p th:text="${device.getName() + ' ' + device.getMac_address() + ' '
+        + device.getUser_id()}"></p>
+<a th:href="@{/devices/{id}/edit(id=${device.getId()})}"><button>Edit</button></a>
+<form th:method="DELETE" th:action="@{/devices/{id}(id=${device.getId()})}">
+  <input type="submit" value="Delete" />
+
+</form>
+
+
+</body>
+</html>

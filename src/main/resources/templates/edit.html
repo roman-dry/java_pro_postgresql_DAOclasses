@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+<body>
+    <form th:method="PATCH" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
+        <label for="phone">Enter your phone number</label>
+        <input type="text" th:field="*{phone}" id="phone" />
+        <label for="name">Enter your name</label>
+        <input type="text" th:field="*{name}" id="name" />
+        <label for="lastname">Enter your surname</label>
+        <input type="text" th:field="*{lastname}" id="lastname" />
+        <label for="gender">Enter your gender</label>
+        <input type="text" th:field="*{gender}" id="gender" />
+        <br>
+        <input type="submit" value="Update" />
+
+    </form>
+
+</body>
+</html>
